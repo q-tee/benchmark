@@ -22,7 +22,8 @@ d2fixed_buffered           | :white_check_mark:
 fpconv_dtoa                | precision digits doesn't always match to reference results (i.e. `0.43394907957111351` being printed as `0.4339490795711135`)
 CRT::RealToString          | :white_check_mark:
 
-![visualization](./results/dtoa/visualization-release-vc2022-win64.svg)
+![visualization](./results/dtoa/visualization-dark-release-vc2022-win64.svg#gh-dark-mode-only)
+![visualization](./results/dtoa/visualization-light-release-vc2022-win64.svg#gh-light-mode-only)
 
 ### string to double conversion
 measurements were made on **1024** strings converted from randomly generated values in the range -1.0-1.0 (small), 1.0-1e15 (medium), 1e53-max (large) and run **16** times. the minimum time duration is measured over **10** trials
@@ -34,7 +35,8 @@ std::from_chars (MSC)      | :white_check_mark: conditionally uses Ryu algorithm
 s2d                        | doesn't support values with more than 17 digits, so *medium* and *large* measurements are wrong
 CRT::StringToReal          | :white_check_mark:
 
-![visualization](./results/atod/visualization-release-vc2022-win64.svg)
+![visualization](./results/atod/visualization-dark-release-vc2022-win64.svg#gh-dark-mode-only)
+![visualization](./results/atod/visualization-light-release-vc2022-win64.svg#gh-light-mode-only)
 
 # usage
 to add your own algorithm into the benchmark, follow these steps:
