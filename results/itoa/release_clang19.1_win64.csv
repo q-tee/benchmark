@@ -1,0 +1,8 @@
+type,name,function,time(ns)
+dec,CLANG,null,1.489
+dec,CLANG,std::sprintf_s,53.326
+dec,CLANG,std::to_chars,17.371
+dec,CLANG,std::to_string,46.985
+dec,CLANG,std::ostringstream,303.809
+dec,STB,stbsp_snprintf,26.758
+dec,Q-TEE,CRT::IntegerToString,9.619

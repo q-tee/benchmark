@@ -1,0 +1,4 @@
+type,name,function,time(ns)
+ttoa,CLANG,null,1.014
+ttoa,CLANG,std::strftime,122.973
+ttoa,Q-TEE,CRT::TimeToString,5.574

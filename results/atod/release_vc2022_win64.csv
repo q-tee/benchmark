@@ -1,0 +1,16 @@
+type,name,function,time(ns)
+small,MSC,null,1.239
+small,MSC,std::strtod,90.503
+small,MSC,std::from_chars,66.394
+small,RYU,s2d,34.540
+small,Q-TEE,CRT::StringToReal,121.033
+medium,MSC,null,1.001
+medium,MSC,std::strtod,74.542
+medium,MSC,std::from_chars,66.193
+medium,RYU,s2d,22.546
+medium,Q-TEE,CRT::StringToReal,40.924
+large,MSC,null,1.031
+large,MSC,std::strtod,912.488
+large,MSC,std::from_chars,904.309
+large,RYU,s2d,92.645
+large,Q-TEE,CRT::StringToReal,842.236

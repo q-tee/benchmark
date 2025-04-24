@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="core.cpp" />
+    <ClCompile Include="dependencies\double-conversion\bignum.cc">
+      <Filter>dependencies\double-conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\double-conversion\bignum-dtoa.cc">
+      <Filter>dependencies\double-conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\double-conversion\cached-powers.cc">
+      <Filter>dependencies\double-conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\double-conversion\double-to-string.cc">
+      <Filter>dependencies\double-conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\double-conversion\fast-dtoa.cc">
+      <Filter>dependencies\double-conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\double-conversion\fixed-dtoa.cc">
+      <Filter>dependencies\double-conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\double-conversion\string-to-double.cc">
+      <Filter>dependencies\double-conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\double-conversion\strtod.cc">
+      <Filter>dependencies\double-conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\ryu\d2fixed.c">
+      <Filter>dependencies\ryu</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\fpconv\fpconv.c">
+      <Filter>dependencies\fpconv</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\ryu\s2d.c">
+      <Filter>dependencies\ryu</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\ryu\s2f.c">
+      <Filter>dependencies\ryu</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="tests">
+      <UniqueIdentifier>{462aa09f-1493-493e-835e-4374b1110530}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies">
+      <UniqueIdentifier>{d0a55b8d-c4d2-492b-92e4-4a2ade058119}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\double-conversion">
+      <UniqueIdentifier>{8fe656a9-4ae5-4df1-aa83-3bfe4b008ef9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\ryu">
+      <UniqueIdentifier>{fde3165c-4bc3-4355-a193-0f9cf76c6790}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\fpconv">
+      <UniqueIdentifier>{7eafa76c-1e44-448f-9715-36b073119173}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\string-value">
+      <UniqueIdentifier>{8846a27d-476b-4708-8772-bcfda0442b5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\value-string">
+      <UniqueIdentifier>{1ec75977-cbfd-49d8-97e8-d57c825ac327}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\time-string">
+      <UniqueIdentifier>{7cedec1c-948c-4916-ac23-dad42aa53bc4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="test.h" />
+    <ClInclude Include="tests\itoa.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\dtoa.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\atod.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\string-value\base.h">
+      <Filter>tests\string-value</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\string-value\from_chars.h">
+      <Filter>tests\string-value</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\string-value\ryu.h">
+      <Filter>tests\string-value</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\string-value\strtod.h">
+      <Filter>tests\string-value</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\value-string\base.h">
+      <Filter>tests\value-string</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\value-string\double_conversion.h">
+      <Filter>tests\value-string</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\value-string\fpconv.h">
+      <Filter>tests\value-string</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\value-string\milo.h">
+      <Filter>tests\value-string</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\value-string\oss.h">
+      <Filter>tests\value-string</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\value-string\ryu.h">
+      <Filter>tests\value-string</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\value-string\sprintf.h">
+      <Filter>tests\value-string</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\value-string\stb.h">
+      <Filter>tests\value-string</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\value-string\to_chars.h">
+      <Filter>tests\value-string</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\value-string\to_string.h">
+      <Filter>tests\value-string</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\time-string\base.h">
+      <Filter>tests\time-string</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\ttoa.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\time-string\strftime.h">
+      <Filter>tests\time-string</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\string-value\qtee.h">
+      <Filter>tests\string-value</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\time-string\qtee.h">
+      <Filter>tests\time-string</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\value-string\qtee.h">
+      <Filter>tests\value-string</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

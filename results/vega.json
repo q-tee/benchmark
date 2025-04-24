@@ -1,0 +1,59 @@
+{
+  "data": {
+    "values": [
+      {
+        "type": "XXX",
+        "name": "XXX",
+        "function": null,
+        "time(ns)": 0
+      }
+    ]
+  },
+  "mark": {"type": "bar", "opacity": 0.96, "tooltip": {"content": "data"}},
+  "encoding": {
+    "x": {
+      "field": "time(ns)",
+      "type": "quantitative",
+      "axis": {"labelOverlap": true}
+    },
+    "y": {
+      "field": "function",
+      "type": "nominal",
+      "aggregate": null,
+      "axis": {"labelOverlap": true},
+      "sort": {"encoding": "x", "order": "ascending"}
+    },
+    "color": {
+      "field": "type",
+      "type": "nominal",
+      "aggregate": null
+    },
+    "column": {
+      "field": "type",
+      "type": "nominal",
+      "aggregate": null
+    },
+    "tooltip": [
+      {"field": "function", "type": "nominal"},
+      {"field": "name", "type": "nominal"},
+      {"field": "time(ns)", "type": "quantitative"}
+    ]
+  },
+  "resolve": {
+    "scale": {
+      "x": "independent",
+      "y": "shared",
+      "color": "shared",
+      "opacity": "shared",
+      "shape": "shared",
+      "size": "shared"
+    },
+    "axis": {"x": "shared", "y": "shared"},
+    "legend": {
+      "color": "shared",
+      "opacity": "shared",
+      "shape": "shared",
+      "size": "shared"
+    }
+  }
+}
