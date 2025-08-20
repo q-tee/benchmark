@@ -26,12 +26,14 @@
     "color": {
       "field": "type",
       "type": "nominal",
-      "aggregate": null
+      "aggregate": null,
+	  "sort": "descending"
     },
     "column": {
       "field": "type",
       "type": "nominal",
-      "aggregate": null
+      "aggregate": null,
+	  "sort": "descending"
     },
     "tooltip": [
       {"field": "function", "type": "nominal"},
