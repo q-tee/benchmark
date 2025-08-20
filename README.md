@@ -38,6 +38,23 @@ CRT::StringToReal          | :white_check_mark:
 ![visualization](./results/atod/visualization-dark-release-vc2022-win64.svg#gh-dark-mode-only)
 ![visualization](./results/atod/visualization-light-release-vc2022-win64.svg#gh-light-mode-only)
 
+# build
+- build with Visual Studio:
+1. open the solution in repository root directory
+2. select target architecture and build type
+3. build the solution
+4. output files will be written to the `build` directory
+- build with CMake:
+1. open terminal in repository root directory
+2. create the project and build
+```console
+user@machine:~/benchmark$ mkdir intermediate
+user@machine:~/benchmark$ cd intermediate
+user@machine:~/benchmark/intermediate$ cmake .. -G "Unix Makefiles" -D CMAKE_BUILD_TYPE=Release
+user@machine:~/benchmark/intermediate$ make
+```
+3. output files will be written to the `build` directory
+
 # usage
 to add your own algorithm into the benchmark, follow these steps:
 1. add your implementation files into `dependencies` directory
@@ -46,3 +63,6 @@ to add your own algorithm into the benchmark, follow these steps:
 4. override `GetName()` and `GetMethodName()` methods with your library name and the name of the used function, respectively
 5. create a static method that matches the prototype and set it via the constructor
 6. add a instance to appropriate bench object in the appropriate test file
+
+# further information
+you can read about installation of particular libraries, contributing and look for other general information on the [q-tee](https://github.com/q-tee/) main page.
