@@ -15,6 +15,10 @@
 #include <iomanip>
 // used: [stl] vector
 #include <vector>
+// used: [stl] ranges
+#include <ranges>
+// used: [stl] transform
+#include <algorithm>
 
 #if !defined(_DEBUG) || defined(NDEBUG)
 #define Q_BENCH_BUILD "release"

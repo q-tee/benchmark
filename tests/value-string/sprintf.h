@@ -14,25 +14,25 @@ public:
 
 	[[nodiscard]] const char* GetMethodName() const override
 	{
-		return "std::sprintf_s";
+		return "std::sprintf";
 	}
 
 private:
 	static char* ToString(char* szBuffer, std::size_t nBufferSize, const T value)
 	{
 		if constexpr (std::is_floating_point_v<T>)
-			::sprintf_s(szBuffer, nBufferSize, "%.17f", value);
+			::sprintf(szBuffer, "%.17f", value);
 		else if constexpr (sizeof(T) == sizeof(std::uint64_t))
 		{
 			if constexpr (std::is_signed_v<T>)
-				::sprintf_s(szBuffer, nBufferSize, "%" PRId64, value);
+				::sprintf(szBuffer, "%" PRId64, value);
 			else
-				::sprintf_s(szBuffer, nBufferSize, "%" PRIu64, value);
+				::sprintf(szBuffer, "%" PRIu64, value);
 		}
 		else if constexpr (std::is_signed_v<T>)
-			::sprintf_s(szBuffer, nBufferSize, "%" PRId32, value);
+			::sprintf(szBuffer, "%" PRId32, value);
 		else
-			::sprintf_s(szBuffer, nBufferSize, "%" PRIu32, value);
+			::sprintf(szBuffer, "%" PRIu32, value);
 
 		return szBuffer;
 	}

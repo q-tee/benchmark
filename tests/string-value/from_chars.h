@@ -1,6 +1,9 @@
 #pragma once
 #include "base.h"
 
+#include <cstring>
+#include <charconv>
+
 template <typename T>
 class CFromCharsToValue : public CStringToValue<T>
 {

@@ -37,7 +37,7 @@ namespace BENCH::ATOD
 		for (std::size_t i = 0U; i < nDataCount; i++)
 		{
 			pData[i] = new char[512];
-			::sprintf_s(pData[i], 512U, "%.17f", smallDistribution(randomEngine));
+			::sprintf(pData[i], "%.17f", smallDistribution(randomEngine));
 		}
 
 		CBenchTest bench("ATOD/SMALL", kIterationCount);
@@ -57,7 +57,7 @@ namespace BENCH::ATOD
 		// generate medium values data
 		std::uniform_real_distribution<double> mediumDistribution(1.0, 1e15);
 		for (std::size_t i = 0U; i < nDataCount; i++)
-			::sprintf_s(pData[i], 512U, "%.17f", mediumDistribution(randomEngine));
+			::sprintf(pData[i], "%.17f", mediumDistribution(randomEngine));
 
 		bench.SetName("ATOD/MEDIUM");
 		bench.SetData(pData, nDataCount);
@@ -66,7 +66,7 @@ namespace BENCH::ATOD
 		// generate large values data
 		std::uniform_real_distribution<double> largeDistribution(1e53, (std::numeric_limits<double>::max)());
 		for (std::size_t i = 0U; i < nDataCount; i++)
-			::sprintf_s(pData[i], 512U, "%.17f", largeDistribution(randomEngine));
+			::sprintf(pData[i], "%.17f", largeDistribution(randomEngine));
 
 		bench.SetName("ATOD/LARGE");
 		bench.SetData(pData, nDataCount);

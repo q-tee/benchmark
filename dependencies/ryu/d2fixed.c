@@ -347,7 +347,7 @@ static inline int copy_special_str_printf(char* const result, const bool sign, c
     memcpy(result, "nan", 3);
     return 3;
   }
-  if (uSign) {
+  if (sign) {
     result[0] = '-';
   }
 #endif

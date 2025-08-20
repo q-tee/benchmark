@@ -1,6 +1,7 @@
 #pragma once
 #include "base.h"
 
+#include <cstring>
 #include <string>
 
 template <typename T>
@@ -21,7 +22,7 @@ private:
 	static char* ToString(char* szBuffer, std::size_t nBufferSize, const T value)
 	{
 		const std::string strResult = std::to_string(value);
-		::strcpy_s(szBuffer, nBufferSize, strResult.c_str());
+		::strcpy(szBuffer, strResult.c_str());
 		return szBuffer;
 	}
 };

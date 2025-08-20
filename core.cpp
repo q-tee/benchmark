@@ -1,14 +1,16 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
-
-// used: [stl] ofstream
-#include <fstream>
+﻿#include <q-tee/common/common.h>
 
 #ifdef Q_OS_WINDOWS
+#define _CRT_SECURE_NO_WARNINGS
+
 #ifndef WIN32_LEAN_AND_MEAN
 #define WIN32_LEAN_AND_MEAN
 #endif
 #include <windows.h>
 #endif
+
+// used: [stl] ofstream
+#include <fstream>
 
 #include "tests/dtoa.h"
 #include "tests/atod.h"

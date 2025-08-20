@@ -1,6 +1,7 @@
 #pragma once
 #include "base.h"
 
+#include <cstring>
 #include <sstream>
 #include <iomanip>
 
@@ -26,7 +27,7 @@ private:
 			ossNumber << std::fixed << std::setprecision(17) << value;
 		else
 			ossNumber << value;
-		::strcpy_s(szBuffer, nBufferSize, ossNumber.str().c_str());
+		::strcpy(szBuffer, ossNumber.str().c_str());
 		return szBuffer;
 	}
 };
