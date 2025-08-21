@@ -48,10 +48,8 @@ CRT::StringToReal          | :white_check_mark:
 1. open terminal in repository root directory
 2. create the project and build
 ```console
-user@machine:~/benchmark$ mkdir intermediate
-user@machine:~/benchmark$ cd intermediate
-user@machine:~/benchmark/intermediate$ cmake .. -G "Unix Makefiles" -D CMAKE_BUILD_TYPE=Release
-user@machine:~/benchmark/intermediate$ make
+user@machine:~/benchmark$ cmake -B intermediate -D CMAKE_BUILD_TYPE=Release
+user@machine:~/benchmark$ cmake --build intermediate --config=Release
 ```
 3. output files will be written to the `build` directory
 
