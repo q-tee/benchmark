@@ -1,4 +1,4 @@
 type,name,function,time(ns)
-ttoa,MSC,null,1.351
-ttoa,MSC,std::strftime,102.534
-ttoa,Q-TEE,CRT::TimeToString,8.784
+ttoa,MSC,null,1.014
+ttoa,MSC,std::strftime,99.831
+ttoa,Q-TEE,CRT::TimeToString,8.615

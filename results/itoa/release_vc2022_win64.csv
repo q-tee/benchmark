@@ -1,8 +1,8 @@
 type,name,function,time(ns)
-dec,MSC,null,1.495
-dec,MSC,std::sprintf,52.496
-dec,MSC,std::to_chars,20.044
-dec,MSC,std::to_string,51.422
-dec,MSC,std::ostringstream,315.814
-dec,STB,stbsp_snprintf,21.613
-dec,Q-TEE,CRT::IntegerToString,11.700
+dec,MSC,null,1.245
+dec,MSC,std::sprintf,52.930
+dec,MSC,std::to_chars,20.367
+dec,MSC,std::to_string,52.240
+dec,MSC,std::ostringstream,310.510
+dec,STB,stbsp_snprintf,21.948
+dec,Q-TEE,CRT::IntegerToString,11.652
