@@ -10,11 +10,6 @@ template <typename T>
 class CStbToString : public CValueToString<T>
 {
 public:
-	CStbToString()
-	{
-		this->fnConvertToString = &ToString;
-	}
-
 	[[nodiscard]] const char* GetName() const override
 	{
 		return "STB";
@@ -25,8 +20,7 @@ public:
 		return "stbsp_snprintf";
 	}
 
-private:
-	static char* ToString(char* szBuffer, std::size_t nBufferSize, const T value)
+	char* ToString(char* szBuffer, std::size_t nBufferSize, const T value) override
 	{
 		if constexpr (std::is_floating_point_v<T>)
 			stbsp_snprintf(szBuffer, static_cast<int>(nBufferSize), "%.17f", value);

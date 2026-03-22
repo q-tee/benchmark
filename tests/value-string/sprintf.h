@@ -7,18 +7,12 @@ template <typename T>
 class CSprintfToString : public CValueToString<T>
 {
 public:
-	CSprintfToString()
-	{
-		this->fnConvertToString = &ToString;
-	}
-
 	[[nodiscard]] const char* GetMethodName() const override
 	{
 		return "std::sprintf";
 	}
 
-private:
-	static char* ToString(char* szBuffer, std::size_t nBufferSize, const T value)
+	char* ToString(char* szBuffer, std::size_t nBufferSize, const T value) override
 	{
 		if constexpr (std::is_floating_point_v<T>)
 			::sprintf(szBuffer, "%.17f", value);

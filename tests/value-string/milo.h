@@ -6,11 +6,6 @@
 class CMiloToString : public CValueToString<double>
 {
 public:
-	CMiloToString()
-	{
-		this->fnConvertToString = &ToString;
-	}
-
 	[[nodiscard]] const char* GetName() const override
 	{
 		return "MILO";
@@ -21,8 +16,7 @@ public:
 		return "dtoa_milo";
 	}
 
-private:
-	static char* ToString(char* szBuffer, std::size_t nBufferSize, double dlValue)
+	char* ToString(char* szBuffer, std::size_t nBufferSize, double dlValue) override
 	{
 		dtoa_milo(dlValue, szBuffer);
 		return szBuffer;

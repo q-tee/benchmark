@@ -7,11 +7,6 @@ template <typename T> requires std::is_floating_point_v<T>
 class CRyuToValue : public CStringToValue<T>
 {
 public:
-	CRyuToValue()
-	{
-		this->fnConvertToValue = &ToValue;
-	}
-
 	[[nodiscard]] const char* GetName() const override
 	{
 		return "RYU";
@@ -22,8 +17,7 @@ public:
 		return "s2d";
 	}
 
-private:
-	static T ToValue(const char* szSource)
+	T ToValue(const char* szSource) override
 	{
 		T result = 0;
 

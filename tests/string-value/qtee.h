@@ -7,11 +7,6 @@
 class CQTeeToValue : public CStringToValue<double>
 {
 public:
-	CQTeeToValue()
-	{
-		this->fnConvertToValue = &ToValue;
-	}
-
 	[[nodiscard]] const char* GetName() const override
 	{
 		return "Q-TEE";
@@ -22,8 +17,7 @@ public:
 		return "CRT::StringToReal";
 	}
 
-private:
-	static double ToValue(const char* szSource)
+	double ToValue(const char* szSource) override
 	{
 		return CRT::StringToReal<double>(szSource);
 	}

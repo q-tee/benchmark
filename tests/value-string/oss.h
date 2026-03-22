@@ -9,18 +9,12 @@ template <typename T>
 class COStringStreamToString : public CValueToString<T>
 {
 public:
-	COStringStreamToString()
-	{
-		this->fnConvertToString = &ToString;
-	}
-
 	[[nodiscard]] const char* GetMethodName() const override
 	{
 		return "std::ostringstream";
 	}
 
-private:
-	static char* ToString(char* szBuffer, std::size_t nBufferSize, const T value)
+	char* ToString(char* szBuffer, std::size_t nBufferSize, const T value) override
 	{
 		std::ostringstream ossNumber;
 		if constexpr (std::is_floating_point_v<T>)

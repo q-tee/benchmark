@@ -8,18 +8,12 @@ template <typename T>
 class CToStringToString : public CValueToString<T>
 {
 public:
-	CToStringToString()
-	{
-		this->fnConvertToString = &ToString;
-	}
-
 	[[nodiscard]] const char* GetMethodName() const override
 	{
 		return "std::to_string";
 	}
 
-private:
-	static char* ToString(char* szBuffer, std::size_t nBufferSize, const T value)
+	char* ToString(char* szBuffer, std::size_t nBufferSize, const T value) override
 	{
 		const std::string strResult = std::to_string(value);
 		::strcpy(szBuffer, strResult.c_str());

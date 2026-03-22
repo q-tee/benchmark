@@ -6,11 +6,6 @@
 class CRyuToString : public CValueToString<double>
 {
 public:
-	CRyuToString()
-	{
-		this->fnConvertToString = &ToString;
-	}
-
 	[[nodiscard]] const char* GetName() const override
 	{
 		return "RYU";
@@ -21,8 +16,7 @@ public:
 		return "d2fixed_buffered";
 	}
 
-private:
-	static char* ToString(char* szBuffer, std::size_t nBufferSize, double dlValue)
+	char* ToString(char* szBuffer, std::size_t nBufferSize, double dlValue) override
 	{
 		d2fixed_buffered(dlValue, 17, szBuffer);
 		return szBuffer;
