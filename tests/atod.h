@@ -4,6 +4,7 @@
 
 #include "string-value/strtod.h"
 #include "string-value/from_chars.h"
+#include "string-value/double_conversion.h"
 #include "string-value/ryu.h"
 #include "string-value/qtee.h"
 
@@ -13,7 +14,7 @@ namespace BENCH::ATOD
 	 * times to repeat operation per capture, used to deal on more stable time delta for small operations
 	 * @note: if used, final duration may depend on branch prediction, cache and other factors
 	 */
-	constexpr unsigned int kIterationCount = 16U;
+	constexpr unsigned int kIterationCount = 32U;
 
 	inline void Test(const char* szFileName)
 	{
@@ -31,14 +32,13 @@ namespace BENCH::ATOD
 
 		constexpr std::size_t nDataCount = 1024U;
 		char** pData = new char*[nDataCount];
+		for (std::size_t i = 0U; i < nDataCount; i++)
+			pData[i] = new char[512];
 
 		// generate small values data
 		std::uniform_real_distribution<double> smallDistribution(-1.0, 1.0);
 		for (std::size_t i = 0U; i < nDataCount; i++)
-		{
-			pData[i] = new char[512];
 			::sprintf(pData[i], "%.17f", smallDistribution(randomEngine));
-		}
 
 		CBenchTest bench("ATOD/SMALL", kIterationCount);
 		bench.SetData(pData, nDataCount);
@@ -49,6 +49,7 @@ namespace BENCH::ATOD
 		bench.Add(new CStrtodToValue<double>());
 		bench.Add(new CFromCharsToValue<double>());
 		// external
+		bench.Add(new CDoubleConversionToValue<double>());
 		bench.Add(new CRyuToValue<double>()); // @note: doesn't support more than 17 digits
 		bench.Add(new CQTeeToValue());
 
@@ -73,7 +74,7 @@ namespace BENCH::ATOD
 		bench.Report(ofsFile);
 
 		for (std::size_t i = 0U; i < nDataCount; ++i)
-			delete pData[i];
+			delete[] pData[i];
 		delete[] pData;
 	}
 }

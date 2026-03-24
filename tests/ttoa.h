@@ -8,7 +8,7 @@ namespace BENCH::TTOA
 	 * times to repeat operation per capture, used to deal on more stable time delta for small operations
 	 * @note: if used, final duration may depend on branch prediction, cache and other factors
 	 */
-	constexpr unsigned int kIterationCount = 16U;
+	constexpr unsigned int kIterationCount = 32U;
 
 	inline void Test(const char* szFileName)
 	{
