@@ -28,12 +28,13 @@ CRT::RealToString          | :white_check_mark:
 ### string to double conversion
 measurements were made on **1024** strings converted from randomly generated values in the range \[-1.0 .. 1.0\] (small), \[1.0 .. 1e15\] (medium), \[1e53 .. 1e308\] (large) and run **16** times. the minimum time duration is measured over **10** trials.
 
-implementation             | note
--------------------------- | ----
-std::strtod (MSC)          | :white_check_mark: (reference)
-std::from_chars (MSC)      | :white_check_mark: conditionally uses Ryu algorithm internally
-s2d                        | doesn't support values with more than 17 digits, so *medium* and *large* measurements are wrong
-CRT::StringToReal          | :white_check_mark:
+implementation                    | note
+--------------------------------- | ----
+std::strtod (MSC)                 | :white_check_mark: (reference)
+std::from_chars (MSC)             | :white_check_mark: conditionally uses Ryu algorithm internally
+double_conversion::StringToDouble | :white_check_mark:
+s2d                               | doesn't support values with more than 17 digits, so *medium* and *large* measurements are wrong
+CRT::StringToReal                 | :white_check_mark:
 
 ![visualization](./results/atod/visualization-dark-release-vc2022-win64.svg#gh-dark-mode-only)
 ![visualization](./results/atod/visualization-light-release-vc2022-win64.svg#gh-light-mode-only)
