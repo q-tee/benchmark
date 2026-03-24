@@ -59,8 +59,8 @@ to add your own algorithm into the benchmark, follow these steps:
 2. create header file in the appropriate tests directory (e.g. `atod`, `dtoa`, `itoa`, etc)
 3. create a class declaring your implementation based on one of the available interfaces (e.g. `CValueToString`, `CStringToValue`, etc)
 4. override `GetName()` and `GetMethodName()` methods with your library name and the name of the used function, respectively
-5. create a static method that matches the prototype and set it via the constructor
-6. add a instance to appropriate bench object in the appropriate test file
+5. override the virtual handler method of the corresponding interface (e.g. `ToString`, `ToValue`, etc)
+6. add an instance of the appropriate bench object to the corresponding test file
 
 # further information
 you can read about installation of particular libraries, contributing and look for other general information on the [q-tee](https://github.com/q-tee/) main page.
