@@ -7,7 +7,7 @@ note that it doesn't verify the correctness or compliance of the algorithms used
 
 here is a chart visualization of the results measured @ *4.21GHz*, compiled with *MSVC 2022*, run on *Windows 11 64-bit*:
 ### string to double conversion
-measurements were made on **1024** strings converted from randomly generated values in the range \[-1.0 .. 1.0\] (small), \[1.0 .. 1e15\] (medium), \[1e53 .. 1e308\] (large) and run **16** times. the minimum time duration is measured over **10** trials.
+measurements were made on **1024** strings converted from randomly generated values in the range \[-1.0 .. 1.0\] (small), \[1.0 .. 1e15\] (medium), \[1e53 .. 1e308\] (large) and run **32** times. the minimum time duration is measured over **10** trials.
 
 implementation                    | note
 --------------------------------- | ----
@@ -21,7 +21,7 @@ CRT::StringToReal                 | :white_check_mark:
 ![visualization](./results/atod/visualization-light-release-vc2022-win64.svg#gh-light-mode-only)
 
 ### double to string conversion
-measurements were made on **1024** values, which were generated randomly in the range \[-1.0 .. 1.0\] (small), \[1.0 .. 1e15\] (medium), \[1e53 .. 1e308\] (large) and run **16** times. the minimum time duration is measured over **10** trials.
+measurements were made on **1024** values, which were generated randomly in the range \[-1.0 .. 1.0\] (small), \[1.0 .. 1e15\] (medium), \[1e53 .. 1e308\] (large) and run **32** times. the minimum time duration is measured over **10** trials.
 
 implementation             | note
 -------------------------- | ----
